@@ -24,3 +24,6 @@ See below for calculations that can be performed.
 - [x] Sample Mean
 - [X] Sample Standard Deviation
 - [X] Variance of sample proportion
+
+
+this is just an introductio, project is under building will be updated soon
