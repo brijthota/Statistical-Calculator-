@@ -1,2 +1,2 @@
-def subtraction(a, b):
+def sub(a, b):
     return float(a) - float(b)
