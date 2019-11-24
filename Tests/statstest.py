@@ -1,7 +1,7 @@
 import unittest
 
 from Csvreader.Csvreader import csvreader
-from Calculator.Calculator import calculator
+from Calculator.Calculator import Calculator
 from Statistics.Stats import Statistics
 
 
