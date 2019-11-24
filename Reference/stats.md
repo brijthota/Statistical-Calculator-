@@ -1,4 +1,4 @@
-#Statistical Formulae
+# Statistical Formulae
 
 
 Statistical formulas are used to calculate values related to statistical concepts or analyses.  Here we will discuss common formulas and what they stand for.
