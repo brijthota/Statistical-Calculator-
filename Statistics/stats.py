@@ -3,7 +3,7 @@ from Statistics.Mean import mean
 from Statistics.Median import median
 from Statistics.Mode import mode
 from Csvreader.Csvreader import CsvReader
-
+from Statistics.sample import sample
 
 class Statistics(Calculator):
     data = []
