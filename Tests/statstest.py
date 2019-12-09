@@ -12,8 +12,8 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.statistics, statistics)
 
     def test_median(self):
-        test_data = csvreader('Tests/csvfiles/Array3.csv').data
-        test_result = csvreader('Tests/csvfiles/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvfiles/Array.csv').data
+        test_result = csvreader('Tests/csvfiles/res.csv').data
 
         for column in test_result:
             result_test = float(column['Medain'])
@@ -28,8 +28,8 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(round(self.statistics.result), round(result_test))
 
     def test_mode(self):
-        test_data = csvreader('Tests/csvfiles/Array3.csv').data
-        test_result = csvreader('Tests/csvfiles/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvfiles/Array.csv').data
+        test_result = csvreader('Tests/csvfiles/res.csv').data
 
         for column in test_result:
             result_test = float(column['Mode'])
@@ -44,8 +44,8 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(round(self.statistics.result), round(result_test))
 
     def test_mean(self):
-        test_data = csvreader('Tests/csvfiles/Array3.csv').data
-        test_result = csvreader('Tests/csvfiles/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvfiles/Array.csv').data
+        test_result = csvreader('Tests/csvfiles/res.csv').data
 
         for column in test_result:
             result_test = float(column['Mean'])
@@ -62,8 +62,8 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(round(self.statistics.result), round(result_test))
 
     def test_stdev(self):
-        test_data = csvreader('Tests/csvfiles/Array3.csv').data
-        test_result = csvreader('Tests/csvfiles/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvfiles/Array.csv').data
+        test_result = csvreader('Tests/csvfiles/res.csv').data
 
         for column in test_result:
             result_test = float(column['Stdev'])
