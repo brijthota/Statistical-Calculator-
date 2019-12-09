@@ -25,14 +25,12 @@ Base = declarative_base()
 
 
 Base.metadata.create_all(engine)
-
- Base.metadata.bind = engine
+Base.metadata.bind = engine
 
  DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
- 
-new_person1 = Person(name='Vivek')
+ new_person1 = Person(name='Vivek')
 session.add(new_person1)
 
  new_person2 = Person(name='reddy')
