@@ -1,20 +1,19 @@
 import unittest
 
 from Csvreader.csvreader import csvreader
-from Statistics.statistics import statistics
-
+from Statistics.stats import statistics
 
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.statisticss = statistics()
+        self.statistics = statistics()
 
     def test_instantiate_calculator(self):
-        self.assertIsInstance(self.statisticss, statistics)
+        self.assertIsInstance(self.statistics, statistics)
 
     def test_median(self):
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvfiles/Array3.csv').data
+        test_result = csvreader('Tests/csvfiles/Array3_result2.csv').data
 
         for column in test_result:
             result_test = float(column['Medain'])
@@ -25,12 +24,12 @@ class MyTestCase(unittest.TestCase):
             result = float(row['Array'])
             listx.append(result)
 
-        self.statisticss.median_(listx)
-        self.assertEqual(round(self.statisticss.result), round(result_test))
+        self.statistics.median_(listx)
+        self.assertEqual(round(self.statistics.result), round(result_test))
 
     def test_mode(self):
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvfiles/Array3.csv').data
+        test_result = csvreader('Tests/csvfiles/Array3_result2.csv').data
 
         for column in test_result:
             result_test = float(column['Mode'])
@@ -41,12 +40,12 @@ class MyTestCase(unittest.TestCase):
             result = float(row['Array'])
             listx.append(result)
 
-        self.statisticss.mode_(listx)
-        self.assertEqual(round(self.statisticss.result), round(result_test))
+        self.statistics.mode_(listx)
+        self.assertEqual(round(self.statistics.result), round(result_test))
 
     def test_mean(self):
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvfiles/Array3.csv').data
+        test_result = csvreader('Tests/csvfiles/Array3_result2.csv').data
 
         for column in test_result:
             result_test = float(column['Mean'])
@@ -59,12 +58,12 @@ class MyTestCase(unittest.TestCase):
             listx.append(result)
 
 
-        self.statisticss.mean_(listx)
-        self.assertEqual(round(self.statisticss.result), round(result_test))
+        self.statistics.mean_(listx)
+        self.assertEqual(round(self.statistics.result), round(result_test))
 
     def test_stdev(self):
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvfiles/Array3.csv').data
+        test_result = csvreader('Tests/csvfiles/Array3_result2.csv').data
 
         for column in test_result:
             result_test = float(column['Stdev'])
@@ -75,11 +74,11 @@ class MyTestCase(unittest.TestCase):
             result = float(row['Array'])
             listx.append(result)
 
-        self.statisticss.stdev_(listx)
-        self.assertEqual(round(self.statisticss.result), round(result_test))
+        self.statistics.stdev_(listx)
+        self.assertEqual(round(self.statistics.result), round(result_test))
 
     def test_results_property(self):
-        self.assertEqual(self.statisticss.result, 0)
+        self.assertEqual(self.statistics.result, 0)
 
 if __name__ == '__main__':
     unittest.main()
